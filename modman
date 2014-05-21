@@ -1,0 +1,6 @@
+app/code/local/MobWeb/CustomProductMetaTags app/code/local/MobWeb/CustomProductMetaTags/
+
+app/etc/modules/MobWeb_CustomProductMetaTags.xml app/etc/modules/MobWeb_CustomProductMetaTags.xml
+
+# Clear the cache
+@shell   rm -rf $PROJECT/var/cache/* && echo "Magento Cache cleared"

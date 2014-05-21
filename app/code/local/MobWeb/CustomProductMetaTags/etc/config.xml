@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <MobWeb_CustomProductMetaTags>
+            <version>0.1.0</version>
+        </MobWeb_CustomProductMetaTags>
+    </modules>
+    <global>
+        <models>
+            <customproductmetatags>
+                <class>MobWeb_CustomProductMetaTags_Model</class>
+            </customproductmetatags>
+        </models>
+        <helpers>
+            <customproductmetatags>
+                <class>MobWeb_CustomProductMetaTags_Helper</class>
+            </customproductmetatags>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <catalog_controller_product_view>
+                <observers>
+                    <customproductmetatags>
+                        <type>singleton</type>
+                        <class>customproductmetatags/observer</class>
+                        <method>catalogControllerProductView</method>
+                    </customproductmetatags>
+                </observers>
+            </catalog_controller_product_view>
+        </events>
+    </frontend>
+ </config>
